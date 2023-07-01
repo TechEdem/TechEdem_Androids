@@ -4,32 +4,37 @@ import { View, Text, Image, ScrollView, StyleSheet, TouchableOpacity,} from 'rea
 const categories = [
   {
     source: require('../assets/Construction.png'),
-    title: 'Construction'
+    title: 'Construction',
+    link: 'construction',
   },
   {
     source: require('../assets/Architecture.png'),
-    title: 'Architecture'
+    title: 'Architecture',
+    link: 'construction',
   },
   {
     source: require('../assets/Survey.png'),
-    title: 'Survey'
+    title: 'Survey',
+    link: 'construction',
   },
   {
     source: require('../assets/Civil.png'),
-    title: 'Civil Eng.'
+    title: 'Civil Eng.',
+    link: 'construction',
   },
   {
     source: require('../assets/LandSale.png'),
-    title: 'Land Sale'
+    title: 'Land Sale',
+    link: 'construction',
   },
 ]
 
 
 export default function Home({navigation}) {
-  const pressHandler = ()=>{
-    navigation.push('construction')
+  
+const pressHandler = ()=>{
+    navigation.navigate('construction')
   }
-
   return (
     <View>
         <Image source={require('../assets/MobileIntro.png')} style = {styles.intro}/>
